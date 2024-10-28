@@ -7,9 +7,11 @@ const addUserToViews = require('./middleware/addUserToViews');
 require('dotenv').config();
 require('./config/database');
 
+
 // Controllers
 const authController = require('./controllers/auth');
 const isSignedIn = require('./middleware/isSignedIn');
+const gamesController = require('./controllers/games');
 
 const app = express();
 // Set the port from environment variable or default to 3000
@@ -36,12 +38,14 @@ app.use(
 
 app.use(addUserToViews);
 
+
 // Public Routes
 app.get('/', async (req, res) => {
   res.render('index.ejs');
 });
 
 app.use('/auth', authController);
+app.use('/games', isSignedIn,gamesController);
 
 // Protected Routes
 app.use(isSignedIn);
