@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit <%= game.name %></title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Edit Game</h1>
+        <form action="/games/<%= game._id %>?_method=PUT" method="post">
+          <label for="game-name">GAME NAME:</label>
+          <input type="text" name="gameName" id="game-name"  value="<%= game.gameName %>" />
+          
+          <label for="note">Note:</label>
+          <textarea name="note" id="note"></textarea>
+          
+          <label for="status">Status:</label>
+            <select id="status" name="status" value="<%= game.status %>" >
+             <option value="Completed" <%= game.status === "Completed" ? "selected" : ""%>>Completed</option>
+             <option value="Playing" <%= game.status === "Playing" ? "selected" : ""%>>Playing</option>
+             <option value="Paused" <%= game.status === "Paused" ? "selected" : ""%> >Paused</option>
+             <option value="Planing-to-play" <%= game.status === "Planing-to-play" ? "selected" : ""%>>Planing to play</option>
+            </select>
+          
+          <button type="submit">Edit Game</button>
+
+        </form>
+  </body>
+</html>

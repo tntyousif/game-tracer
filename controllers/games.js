@@ -8,9 +8,7 @@ const game = require('../models/game.js');
 router.get('/', async (req, res) => {
     try {
       const games = await Game.find({}).populate('owner');
-      res.render('games/index.ejs', {
-        games: games,
-      });
+      res.render('games/index.ejs', {games});
     } catch (error) {
       console.log(error)
       res.redirect('/')
@@ -44,7 +42,6 @@ router.get('/:gameId', async (req, res) =>{
 router.delete('/:gameId', async (req, res) => {
   try {
     const game = await Game.findById(req.params.gameId);
-    console.log(game);
     if (game.owner.equals(req.session.user._id)) {
     await game.deleteOne();
     res.redirect('/games');
@@ -56,5 +53,33 @@ router.delete('/:gameId', async (req, res) => {
   res.redirect('/')
   }
 });
+
+//edit router
+router.get('/:gameId/edit', async (req, res) => {
+  try {
+    const game = await Game.findById(req.params.gameId);
+    res.render('games/edit.ejs', {game});
+  } catch (error) {
+    console.log(error);
+    res.redirect('/');
+  }
+});
+
+//put router
+router.put('/:gameId', async (req, res) =>{
+  try {
+    const game = await Game.findById(req.params.gameId);
+    if (game.owner.equals(req.session.user._id)) {
+      game.set(req.body);
+      await game.save();
+      res.redirect('/games')
+    } else {
+      res.send("You don't have permission to do that.");
+    }
+  } catch (error) {
+    console.log(error);
+    res.redirect('/');
+  }
+})
 
 module.exports = router;
