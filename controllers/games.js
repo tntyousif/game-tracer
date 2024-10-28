@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const Game = require('../models/game.js');
 const User =require ('../models/user.js');
-const game = require('../models/game.js');
 
 //index route
 router.get('/', async (req, res) => {
