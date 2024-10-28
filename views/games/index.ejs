@@ -1,0 +1,26 @@
+<!-- views/listings/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Games</title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <div class="index-header">
+      <h1>All Games</h1>
+      <a href="/games/new">+ Add Game</a>
+    </div>
+    <div class="card-container">
+      <% games.forEach((game)=> { %>
+      <a href="/games/<%= game._id %>">
+        <h4><%= game.gameName %></h4>
+        <p>Owned by <%= game.owner.username %></p>
+        <p>Status: <%= game.status></p>
+      </a>
+      <% }) %>
+    </div>
+  </body>
+</html>
