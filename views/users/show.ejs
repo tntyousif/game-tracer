@@ -13,16 +13,16 @@
         <p>
           You have 
           <%= myGames.length %> 
-          <%= myGames.length===1 ? 'Games' : 'Games' %>
+          <%= myGames.length === 1 ? 'Game' : 'Games' %>
         </p>
         <div class="profile-card-container">
-            <% myGames.forEach((game) => { %>
-                <h1><%= game.gameName %></h1>
-                <h3>Current Status: <%= game.status %></h3>
-                <% if (game.note) { %>
-                    <p>Note: <%= game.note %></p>
-                <% } %>
-            <% }); %>
+          <% myGames.forEach((game) => { %>
+            <h1><%= game.gameName %></h1>
+            <h3>Current Status: <%= game.status %></h3>
+            <% if (game.note) { %>
+                <p>Note: <%= game.note %></p>
+            <% } %>
+          <% }); %>
         </div>
       </div>
     </body>
