@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Listing = require('../models/listing.js');
+const Game = require('../models/game.js');
 
 
 
