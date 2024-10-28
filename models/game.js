@@ -8,7 +8,7 @@ const gameSchema = new mongoose.Schema({
   status: {
     type: String,
     required: true,
-    enum: ['Completed', 'Playing', 'Paused']
+    enum: ['Completed', 'Playing', 'Paused', 'Planing-to-play']
 },
 owner: {
     type: mongoose.Schema.Types.ObjectId,
