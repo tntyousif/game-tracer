@@ -20,7 +20,7 @@
             <li>
               <a href="/games/<%= game._id %>">
                 <h4><%= game.gameName %></h4>
-                <p>Owned by <%= game.owner %></p>
+                <p>Owned by <%= game.owner.username %></p>
                 <p>Status: <%= game.status %></p>
               </a>
             </li>
