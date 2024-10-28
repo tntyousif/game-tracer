@@ -6,10 +6,9 @@ const User =require ('../models/user.js');
 //index route
 router.get('/', async (req, res) => {
     try {
-      const populatedGame = await User.find({});
-      console.log('Populated Games:', populatedGame);
+      const games = await Game.find();
       res.render('games/index.ejs', {
-        games: populatedGame,
+        games: games,
       });
     } catch (error) {
       console.log(error)

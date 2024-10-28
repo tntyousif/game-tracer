@@ -14,13 +14,21 @@
       <a href="/games/new">+ Add Game</a>
     </div>
     <div class="card-container">
-      <% games.forEach((game)=> { %>
-      <a href="/games/<%= game._id %>">
-        <h4><%= game.gameName %></h4>
-        <p>Owned by <%= game.owner %></p>
-        <p>Status: <%= game.status %></p>
-      </a>
-      <% }) %>
+      <% if (Array.isArray(games) && games.length > 0) { %>
+        <ul>
+          <% games.forEach((game) => { %>
+            <li>
+              <a href="/games/<%= game._id %>">
+                <h4><%= game.gameName %></h4>
+                <p>Owned by <%= game.owner %></p>
+                <p>Status: <%= game.status %></p>
+              </a>
+            </li>
+          <% }) %>
+        </ul>
+      <% } else { %>
+        <p>No games available.</p>
+      <% } %>
     </div>
   </body>
 </html>
