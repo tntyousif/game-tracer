@@ -27,4 +27,15 @@ router.post('/',async (req, res) => {
   res.redirect('/games');
 });
 
+// show route
+router.get('/:gameId', async (req, res) =>{
+  try {
+    const game = await Game.findById(req.params.gameId);
+     res.render('games/show.ejs', {game});
+  } catch (error) {
+    console.log(error);
+    res.redirect('/');
+  }
+});
+
 module.exports = router;
