@@ -9,8 +9,8 @@
   </head>
   <body>
     <% if (user) { %>
+      <%- include('partials/_navbar.ejs') %>
       <h1>Welcome to the app, <%= user.username %>!</h1>
-      <a href="/auth/sign-out">Sign out</a>
       <% } else { %>
       <h1>Welcome to the app, guest.</h1>
       <p>
