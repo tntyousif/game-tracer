@@ -16,13 +16,17 @@
           <%= myGames.length === 1 ? 'Game' : 'Games' %>
         </p>
         <div class="profile-card-container">
-          <% myGames.forEach((game) => { %>
-            <h1><%= game.gameName %></h1>
-            <h3>Current Status: <%= game.status %></h3>
-            <% if (game.note) { %>
-                <p>Note: <%= game.note %></p>
-            <% } %>
-          <% }); %>
+            <ul>
+                <% myGames.forEach((game) => { %>
+                  <li>
+                    <a href="/games/<%= game._id %>">
+                      <h4><%= game.gameName %></h4>
+                      <p>Owned by <%= game.owner.username %></p>
+                      <p>Status: <%= game.status %></p>
+                    </a>
+                  </li>
+                <% }) %>
+              </ul>
         </div>
       </div>
     </body>
