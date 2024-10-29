@@ -3,32 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/stylesheets/sign-up.css" />
-        <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/style-up.css" />
+  
     <title>Sign Up</title>
   </head>
-
-
-  
   <body>
-    <div class="container">
-      <div class="sign-up-card">
-        <h1>Create a new account</h1>
-        <form action="/auth/sign-up" method="POST">
-          <div class="form-group">
+  
+    <div class="signup-page">
+      <div class="signup-form-container-1">
+        <div class="signup-form-container-2">
+          <h1>Sign up</h1>
+          <form action="/auth/sign-up" method="POST">
             <label for="username">Username:</label>
-            <input type="text" name="username" id="username" />
-          </div>
-          <div class="form-group">
+            <input type="text" name="username" id="username" required />
             <label for="password">Password:</label>
-            <input type="password" name="password" id="password" />
-          </div><div class="form-group">
+            <input type="password" name="password" id="password" required />
             <label for="confirmPassword">Confirm Password:</label>
-            <input type="password" name="confirmPassword" id="confirmPassword" />
-          </div>
-          <button type="submit">SIGN UP</button>
-        </form>
+            <input
+              type="password"
+              name="confirmPassword"
+              id="confirmPassword"
+              required
+            />
+            <button type="submit">Sign up</button>
+          </form>
+        </div>
       </div>
+      <div class="signup-img"></div>
     </div>
   </body>
 </html>

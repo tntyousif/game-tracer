@@ -1,237 +1,129 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700');
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #f9f7f0;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f9f7f0;
 }
 
-h1, h2, h3, h4 {
-    margin: 0;
-    text-transform: uppercase;
+.landing-header {
+   display: flex;
+   flex-direction: row;
+   height: 15%;
+   width: 100%;
+   justify-content: space-between;
 }
 
-.index-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    width: 90%;
+header h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
 }
 
-.index-header > h1 {
-    font-size: 1.5em;
+header p {
+  font-size: 1.4rem;
+  font-weight: 400;
 }
 
-.index-header > a {
-    padding: 6px 12px;
-    border: 1px solid gray;
-    text-decoration: none;
-    color: black;
+
+nav {
+  background-color: #7c5656;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  height: 7%;
+  display: flex;
+  justify-content: center;
 }
 
-.index-header > a:hover {
-    background-color: black;
-    color: white;
+nav a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  margin: 0 0.5rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
 }
 
+nav a:hover {
+  background-color: #f5f5f5;
+}
+
+nav a:active {
+  background-color: #658aaf;
+  color: #fff;
+}
+
+input {
+  border: 1px solid rgb(190, 190, 190);
+  border-radius: 10px;
+  margin: 10px 0;
+  width: 15em;
+  padding: 5px;
+}
+
+li {
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+}
 .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 70px;
 }
 
 .card-container > a {
-    padding: 12px 25px;
-    border: 1px solid gray;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    margin: 5px 30px 50px;
-    color: black;
-    width: calc(25% - 40px); /* Responsive card width */
+  padding: 12px 25px;
+  border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin: 5px 30px 50px;
+  color: black;
 }
 
 .card-container > a:hover {
-    background-color: black;
-    color: white;
-}
-
-.new-form-container, .show-info-container, .profile-container {
-    padding: 20px;
-    margin: 20px auto;
-    border: 1px solid gray;
-    width: 90%;
-    max-width: 800px; /* Limit width for readability */
-    background-color: white;
-}
-
-.new-form-container > h1, .show-header > h1 {
-    font-size: 1.6em;
-}
-
-.new-form-container > form, .show-info-container > form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    font-size: 1em;
-    margin: 10px 0 5px;
-}
-
-input, textarea, select {
-    border: 1px solid rgb(190, 190, 190);
-    border-radius: 10px;
-    margin: 10px 0;
-    padding: 10px;
-    width: 100%; /* Full width for inputs */
-}
-
-button {
-    border: none;
-    border-radius: 8px;
-    color: white;
-    font-weight: bold;
-    background-color: #274c9c;
-    padding: 10px 15px;
-    margin: 10px 0;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: black;
-}
-
-.owner-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.owner-container > a {
-    padding: 6px 12px;
-    background-color: #6f8dae;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    border-radius: 8px;
-}
-
-.owner-container > a:hover {
-    background-color: black;
+  background-color: black;
+  color: white;
 }
 
 .profile-card-container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 70px;
 }
 
 .profile-card-container > a {
-    padding: 8px 15px;
-    border: 1px solid gray;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    margin: 5px 10px 20px;
-    color: black;
-    width: calc(30% - 20px); /* Responsive profile card width */
+  padding: 8px 15px;
+  width: 7em;
+  height: 6em;
+  border: 1px solid rgb(145, 75, 75);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin: 5px 10px 20px;
+  color: black;
 }
 
 .profile-card-container > a:hover {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
 
-.signup-page, .signin-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
+.profile-card-container > a > h4 {
+  font-size: 0.9em;
+  text-align: center;
 }
 
-.signup-form-container-1, .signin-form-container-1 {
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.signup-form-container-2, .signin-form-container-2 {
-    padding: 20px;
-    border: 1px solid gray;
-}
-
-.signup-form-container-2 > h1, .signin-form-container-2 > h1 {
-    font-weight: normal;
-    font-size: 1.5em;
-}
-
-.show-page-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-}
-
-.show-img {
-    width: 40%;
-    height: 80%;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.show-details-container {
-    border: 1px solid gray;
-    padding: 20px;
-    width: 70%;
-    margin: 10px 0;
-}
-
-.show-details-container > h3, .show-details-container > p {
-    font-size: 1em;
-}
-
-/* Additional styles for landing and navigation */
-.landing-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
-.house-icon {
-    width: 1.4em;
-    height: 1.4em;
-    margin-left: 5px;
-}
-
-.auth-links {
-    display: flex;
-    align-items: center;
-    margin: 0 20px;
-}
-
-.auth-links > a {
-    color: white;
-    padding: 10px 25px;
-    border-radius: 10px;
-    text-decoration: none;
-    margin: 0 10px;
-    background-color: #274c9c;
-}
-
-.auth-links > a:hover {
-    background-color: black;
+.profile-card-container > a > p {
+  font-size: 0.8em;
 }
