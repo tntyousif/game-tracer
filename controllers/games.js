@@ -29,7 +29,12 @@ router.post('/',async (req, res) => {
 router.get('/:gameId', async (req, res) =>{
   try {
     const game = await Game.findById(req.params.gameId).populate('owner');
-     res.render('games/show.ejs', {game});
+     
+    const userLiked = game.likedByUsers.some((user) =>
+      user.equals(req.session.user._id)
+    );
+    res.render('games/show.ejs', {game, userLiked, });
+    
   } catch (error) {
     console.log(error);
     res.redirect('/');
@@ -80,5 +85,31 @@ router.put('/:gameId', async (req, res) =>{
     res.redirect('/');
   }
 })
+
+// Like button
+router.post('/:gameId/liked-by/:userId', async (req, res) => {
+  try {
+    await Game.findByIdAndUpdate(req.params.gameId, {
+      $push: { likedByUsers: req.params.userId },
+    });
+    res.redirect(`/games/${req.params.gameId}`);
+  } catch (error) {
+    console.log(error);
+    res.redirect('/');
+  }
+});
+
+// dislike
+router.delete('/:gameId/liked-by/:userId', async (req, res) => {
+  try {
+    await Game.findByIdAndUpdate(req.params.gameId, {
+      $pull: { likedByUsers: req.params.userId },
+    });
+    res.redirect(`/games/${req.params.gameId}`);
+  } catch (error) {
+    console.log(error);
+    res.redirect('/');
+  }
+});
 
 module.exports = router;
