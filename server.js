@@ -6,6 +6,7 @@ const MongoStore = require('connect-mongo');
 const addUserToViews = require('./middleware/addUserToViews');
 require('dotenv').config();
 require('./config/database');
+const path = require('path');
 
 
 // Controllers
@@ -36,7 +37,7 @@ app.use(
     }),
   })
 );
-
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(addUserToViews);
 
 app.use('/users', isSignedIn, usersController);
