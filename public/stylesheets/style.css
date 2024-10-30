@@ -15,6 +15,7 @@ body {
    height: 15%;
    width: 100%;
    justify-content: space-between;
+   align-items: baseline;
 }
 
 header h1 {
@@ -33,7 +34,7 @@ nav {
   background-color: #7c5656;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 1rem;
-  height: 7%;
+  height: 9%;
   display: flex;
   justify-content: center;
 }
@@ -67,10 +68,17 @@ input {
 }
 
 li {
+  margin: 5px;
   border: 1px solid black;
   display: flex;
   flex-wrap: wrap;
+  background-color: rgb(239, 221, 141);
 }
+li > a {
+  flex-direction: column;
+  align-content: center;
+}
+
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -126,4 +134,8 @@ li {
 
 .profile-card-container > a > p {
   font-size: 0.8em;
+}
+
+.profile-container {
+    background-color: #ebe5d2;
 }
