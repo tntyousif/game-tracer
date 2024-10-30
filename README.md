@@ -1,6 +1,7 @@
-# MEN Stack Starter Template with Session Authentication
+# Game Tracer
 
-Welcome to the MEN Stack Starter Template! This template provides a foundational setup for building web applications using MongoDB, Express.js, and Node.js, complete with session authentication. This is ideal for students looking to kickstart their development projects.
+## Application Idea  
+ GameTracker is a web application that enables users to register and manage their video games. Users can update the status of their games (e.g., Completed, Playing, Paused, Planing to play) using a dropdown menu and add notes for each game. The application tracks relationships between users and their games, providing a comprehensive view of their gaming experiences. 
 
 ## Table of Contents
 - [Prerequisites](#prerequisites)
@@ -13,85 +14,102 @@ Welcome to the MEN Stack Starter Template! This template provides a foundational
 - [Contributing](#contributing)
 - [License](#license)
 
-## Prerequisites
+## Tools used:
+- javascript
+- EJS
+- CSS
+- MongoDB
 
-Before you begin, ensure you have the following installed on your machine:
-- [Node.js](https://nodejs.org/) (LTS or later)
-- [MongoDB](https://www.mongodb.com/) (make sure it's running)
-- [Git](https://git-scm.com/) (for cloning the repository)
 
-## Clone the Repository
+## User stories
+ 
 
-To clone this repository, open your terminal and run:
+1.  User Registration: 
 
-```bash
-git clone https://github.com/SEB-1-Bahrain/instructor-men-auth.git men-stack-starter-template
-```
+- As a new user, I want to create an account (Create) so that I can track my games. 
 
-## Installation
-Navigate into the cloned directory:
-```bash
-cd men-stack-starter-template
-```
+- As a returning user, I want to log in to my account (Read) to access my game list. 
 
-Then, install the necessary dependencies:
+2. Games Management: 
 
-```bash
-npm i
-```
+- As a user, I want to add a new game to my collection (Create) so that I can keep track of it. 
 
-## Environment Setup
-```plaintext
-MONGODB_URI=atlas_db_uri
-SESSION_SECRET=your_secret_key
-SALT_ROUNDS=10
-```
-Replace `atlas_db_uri` with your desired database name and `your_secret_key` with a secure key.
+- As a user, I want to view a list of all my games (Read) along with their statuses and notes. 
 
-## Removing Git and Creating Your Own Repo
-To remove the existing Git history and create your own repository:
+- As a user, I want to update the status of my game (Update) to reflect my current progress. 
 
-1. Remove the existing .git folder:
-  ```bash
-  rm -rf .git
-  ```
-2. Initialize a new Git repository:
-  ```bash
-  git init
-  ```
-3. Add all files to the new repository:
-  ```bash
-  git add .
-  ```
-4. Commit the changes
-   ```bash
-   git commit -m "Initial commit"
-   ``` 
-5. Create a new repository on GitHub (or any other platform) and follow the instructions to push your local repository.
-  Make a new repository on [GitHub](https://github.com/) named `<your-project-name>`
-  Now link your local project to your remote GitHub repo:
-  ```bash
-  git remote add origin https://github.com/<github-username>/men-stack-relating-data-lab-cookbook.git
-  git push origin main
-  ```
+- As a user, I want to add or edit notes for each game (Update) to remember my thoughts or experiences. 
 
-> 🚨 Do not copy the above command. It will not work. Your GitHub username will replace `<github-username>` (including the `<` and `>`) in the URL above.
+- As a user, I want to delete games from my list (Delete) that I no longer want to track. 
 
-## Running the application
-```bash
-npm run dev
-```
+- As a user, I want to like the games from all game's lists. 
 
-## Features
-- User registration and login with session management
-- Basic CRUD operations
-- Modular file structure
-- Example routes and controllers
-- Basic user model setup
-- Middleware for templates and authorization
-- Basic authentication flow
+3. User Interaction 
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+- As a user, I want to see all the games stored in the database along with their statuses and notes so that I can review my complete collection and compare it with others. 
 
-Happy Coding!
+
+## Mock-up
+- Sign-up page
+<img src="/plan/imgs/signup.png">Sign-up page</img>
+
+- Sign-in page
+<img src="/plan/imgs/signin.png">Sign-in page</img>
+
+- index page
+<img src="/plan/imgs/index.png">Index page</img>
+
+- New page
+<img src="/plan/imgs/new.png">New page</img>
+
+- Show page
+<img src="/plan/imgs/show.png">Show page</img>
+
+- Edit page
+<img src="/plan/imgs/edit.png">Edit page</img>
+
+## Game Logic (pseudo code) 
+1. Adding a New Game: 
+- When a user wants to add a new game, they provide the game name, status (selected from a dropdown), and notes. 
+
+- The system creates a new game entry in the database, associating it with the user's ID. 
+
+- The system confirms that the game has been successfully added. 
+
+<img src="/plan/imgs/myCode/new.png" >
+
+2. Viewing All Games: 
+- When a user wants to see all games stored in the database, the system retrieves all game entries. 
+- The system displays the complete list, including each game’s name, status, and notes, allowing users to review their whole collection. 
+
+<img src="/plan/imgs/myCode/show.png" >
+
+3. Updating Game Information: 
+- When a user wants to update a game, they select the game and provide new status and notes. 
+
+- The system searches for the game in the database using its ID. 
+
+- If the game exists, the system updates the status (selected from a dropdown) and notes. 
+
+- The system confirms that the update was successful. 
+
+- If the game does not exist, the system returns an error message. 
+
+- The users can like games on the viewing page. 
+
+<img src="/plan/imgs/myCode/edit.png" >
+
+4.  Deleting a Game 
+- When a user wants to delete a game, they select the game from their list. 
+
+- The system searches for the game in the database using its ID. 
+
+- If the game is found, the system removes it from the database. 
+
+- The system confirms that the game has been successfully deleted. 
+
+- If the game does not exist, the system returns an error message. 
+
+<img src="/plan/imgs/myCode/delete.png" >
+
+Thank you For 
