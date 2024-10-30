@@ -13,8 +13,9 @@ body {
 }
 .new-container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
+  flex-direction: row;
   min-height: calc(100vh - 80px);
   padding: 20px;
   font-family: Arial, sans-serif;
@@ -72,11 +73,10 @@ button:active {
 
 .new-img {
   background-image: url('https://i.pinimg.com/originals/18/8d/7b/188d7bcd476bf2046ba7648b8a36def1.jpg');
-  min-height: 91vh;
-  background-size: contain ;
+  min-height: 80vh;
+  background-size: cover;
   background-repeat: no-repeat;
-  width: 90%;
-  position: relative;
+  width: 40%;
+  position: relative ;
   z-index: -10;
-justify-content: flex-end;
 }
