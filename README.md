@@ -3,17 +3,8 @@
 ## Application Idea  
  GameTracker is a web application that enables users to register and manage their video games. Users can update the status of their games (e.g., Completed, Playing, Paused, Planing to play) using a dropdown menu and add notes for each game. The application tracks relationships between users and their games, providing a comprehensive view of their gaming experiences. 
 
-## Table of Contents
-- [Prerequisites](#prerequisites)
-- [Clone the Repository](#clone-the-repository)
-- [Installation](#installation)
-- [Environment Setup](#environment-setup)
-- [Running the Application](#running-the-application)
-- [Removing Git and Creating Your Own Repo](#removing-git-and-creating-your-own-repo)
-- [Features](#features)
-- [Contributing](#contributing)
-- [License](#license)
-
+## Website link
+<a href="https://gametracker-5509d0d72b7b.herokuapp.com/games/671f5e7a98699919af7c044b"class="button">Game Tracker</a>
 ## Tools used:
 - javascript
 - EJS
@@ -92,4 +83,6 @@
 
 <img src="/plan/imgs/myCode/delete.png" >
 
+
+## final product
 Thank you For 
