@@ -42,22 +42,22 @@
 
 ## Mock-up
 - Sign-up page
-<img src="/plan/imgs/signup.png">Sign-up page</img>
+<img src="/plan/imgs/signup.png"></img>
 
 - Sign-in page
-<img src="/plan/imgs/signin.png">Sign-in page</img>
+<img src="/plan/imgs/signin.png"></img>
 
 - index page
-<img src="/plan/imgs/index.png">Index page</img>
+<img src="/plan/imgs/index.png"></img>
 
 - New page
-<img src="/plan/imgs/new.png">New page</img>
+<img src="/plan/imgs/new.png"></img>
 
 - Show page
-<img src="/plan/imgs/show.png">Show page</img>
+<img src="/plan/imgs/show.png"></img>
 
 - Edit page
-<img src="/plan/imgs/edit.png">Edit page</img>
+<img src="/plan/imgs/edit.png"></img>
 
 ## Game Logic (pseudo code) 
 1. Adding a New Game: 
