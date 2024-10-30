@@ -20,7 +20,7 @@
             <ul>
                 <% myGames.forEach((game) => { %>
                   <li>
-                    <a href="/games/<%= game._id %>">
+                    <a href="/games/<%= game._id %>" class="button">
                       <h4><%= game.gameName %></h4>
                       <p>Owned by <%= game.owner.username %></p>
                       <p>Status: <%= game.status %></p>

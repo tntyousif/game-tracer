@@ -5,13 +5,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/public/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Edit <%= game.name %></title>
   </head>
-  <body>
+  <body id="edit">
     <%- include('../partials/_navbar.ejs') %>
     <h1>Edit Game</h1>
-        <form action="/games/<%= game._id %>?_method=PUT" method="post">
+        <form action="/games/<%= game._id %>?_method=PUT" method="post" >
           <label for="game-name">GAME NAME:</label>
           <input type="text" name="gameName" id="game-name"  value="<%= game.gameName %>" />
           
@@ -26,7 +26,7 @@
              <option value="Planing-to-play" <%= game.status === "Planing-to-play" ? "selected" : ""%>>Planing to play</option>
             </select>
           
-          <button type="submit">Edit Game</button>
+          <button type="submit" id="editB">Edit Game</button>
 
         </form>
   </body>

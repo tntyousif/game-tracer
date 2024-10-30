@@ -12,14 +12,14 @@
     <%- include('../partials/_navbar.ejs') %>
     <div class="index-header">
       <h1>All Games</h1>
-      <a href="/games/new">+ Add Game</a>
+      <a href="/games/new" class="button">+ Add Game</a>
     </div>
     <div class="card-container">
       <% if (Array.isArray(games) && games.length > 0) { %>
         <ul>
           <% games.forEach((game) => { %>
             <li>
-              <a href="/games/<%= game._id %>">
+              <a href="/games/<%= game._id %>" >
                 <h4><%= game.gameName %></h4>
                 <p>Owned by <%= game.owner.username %></p>
                 <p>Status: <%= game.status %></p>
