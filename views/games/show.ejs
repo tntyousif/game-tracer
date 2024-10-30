@@ -19,8 +19,8 @@
             <p>Owned by you</p>
             <a href="/games/<%= game._id %>/edit" class="button">Edit Game</a>
         
-        <form action="/games/<%= game._id %>?_method=DELETE" method="POST">
-        <button type="submit">Delete Game</button>
+        <form action="/games/<%= game._id %>?_method=DELETE" method="POST" >
+        <button type="submit" id="delete">Delete Game</button>
         </form>
         
         <% } else { %>
