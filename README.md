@@ -84,5 +84,10 @@
 <img src="/plan/imgs/myCode/delete.png" >
 
 
-## final product
-Thank you For 
+## <a href="https://gametracker-5509d0d72b7b.herokuapp.com/games/671f5e7a98699919af7c044b"class="button">Game Tracker final product</a>
+
+
+### Future work
+- CSS styling enhancement
+- Api to retrieve games pics
+- Make profiles list 
