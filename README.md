@@ -32,6 +32,8 @@
 
 
 ## Mock-up
+- ERD
+<img src="/plan/imgs/erd.png" >
 - Sign-up page
 <img src="/plan/imgs/signup.png"></img>
 
@@ -69,7 +71,7 @@
 - The system searches for the game in the database using its ID. 
 - If the game exists, the system updates the status (selected from a dropdown) and notes. 
 - The system confirms that the update was successful. 
-- If the game does not exist, the system returns an error message. 
+- If the user is not the author, the system returns an error message. 
 - The users can like games on the viewing page. 
 
 <img src="/plan/imgs/myCode/edit.png" >
@@ -79,7 +81,7 @@
 - The system searches for the game in the database using its ID. 
 - If the game is found, the system removes it from the database. 
 - The system confirms that the game has been successfully deleted. 
-- If the game does not exist, the system returns an error message. 
+- If the user is not the author, the system returns an error message. 
 
 <img src="/plan/imgs/myCode/delete.png" >
 
