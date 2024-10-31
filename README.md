@@ -86,7 +86,7 @@
 <img src="/plan/imgs/myCode/delete.png" >
 
 
-## <a href="https://gametracker-5509d0d72b7b.herokuapp.com/games/671f5e7a98699919af7c044b"class="button">Game Tracker final product</a>
+## <a href="https://gametracker-5509d0d72b7b.herokuapp.com/"> Game Tracker final product </a>
 
 
 ### Future work
