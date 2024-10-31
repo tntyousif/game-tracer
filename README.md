@@ -4,7 +4,7 @@
  GameTracker is a web application that enables users to register and manage their video games. Users can update the status of their games (e.g., Completed, Playing, Paused, Planing to play) using a dropdown menu and add notes for each game. The application tracks relationships between users and their games, providing a comprehensive view of their gaming experiences. 
 
 ## Website link
-<a href="https://gametracker-5509d0d72b7b.herokuapp.com/games/671f5e7a98699919af7c044b"class="button">Game Tracker</a>
+<a href="https://gametracker-5509d0d72b7b.herokuapp.com/">Game Tracker</a>
 ## Tools used:
 - javascript
 - EJS
